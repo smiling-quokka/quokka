@@ -1,22 +1,31 @@
 <template>
-  <router-link to="/home">Go to Home</router-link>
-  <!-- <transition> -->
-    <router-view />
-  <!-- </transition> -->
+  <div class="content--container flex--row">
+    <navigation-menu />
+    <main>
+      <router-view class="content--page" />
+    </main>
+  </div>
 </template>
 
 <script>
+import { NavigationMenu } from './wizards';
 
 export default {
-  name: 'App',
-}
+    name: 'App',
+    components: { NavigationMenu }
+};
 </script>
 
-<style lang="scss">
-#root {
+<style lang="scss" scoped>
+.content--container {
   height: 100vh;
   width: 100vw;
   background-color: $main;
-  overflow: hidden;
+
+  main {
+    width: 100%;
+    padding-left: 10px;
+  }
 }
+
 </style>
