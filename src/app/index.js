@@ -1,10 +1,11 @@
-import { createApp } from 'vue';
-import utils         from 'utils';
-import store         from 'store';
-import router        from 'router';
+import { createApp, h } from 'vue';
+import utils            from 'utils';
+import store            from 'store';
+import router           from 'router';
 
-import App           from './App.vue';
-let app = createApp(App);
+import App              from './App.vue';
+
+const app  = createApp({ render: () => h(App) });
 
 app.use(router);
 app.use(store);

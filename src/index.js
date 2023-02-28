@@ -2,9 +2,9 @@ import app from './app';
 import 'styles';
 
 function init() {
-  const root = document.getElementById('root');
+    const root = document.getElementById('quokka-app');
 
-  if (root) app.mount(root);
+    if (root) app.mount(root);
 }
 
 document.addEventListener('DOMContentLoaded', init);
