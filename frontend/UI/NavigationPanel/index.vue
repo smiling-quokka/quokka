@@ -1,5 +1,5 @@
 <template>
-  <nav class="nav_bar">
+  <nav class="navigation_panel">
     <router-links />
   </nav>
 </template>
@@ -13,7 +13,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.nav_bar {
+.navigation_panel {
   width: 48px;
   height: 100%;
   background-color: $main;

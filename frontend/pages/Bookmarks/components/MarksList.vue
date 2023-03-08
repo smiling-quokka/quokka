@@ -1,6 +1,9 @@
 <template>
-  <ul v-if="items.length">
-    <li v-for="item in items" :key="item.id">
+  <ul v-if="items?.length">
+    <li
+      v-for="item in items"
+      :key="item.id"
+    >
       <div>{{ JSON.stringify(item) }}</div>
     </li>
   </ul>
@@ -14,7 +17,7 @@ export default {
             type: Array,
             default: () => []
         }
-    }
+    },
 };
 </script>
 
