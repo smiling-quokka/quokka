@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <img
+      class="logo"
       alt="Vue logo"
       src="images/logo.png"
     >
@@ -141,5 +142,9 @@ li {
 }
 a {
   color: #42b983;
+}
+
+.logo {
+  border: 1px solid red;
 }
 </style>

@@ -1,13 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import { HomePage } from '../app/pages';
-
-const routes = [
-    {
-        path: '/',
-        name: '',
-        component: HomePage,
-    },
-];
+import routes from './routes';
 
 const router = createRouter({
     history: createWebHistory(process.env.BASE_URL),
@@ -15,6 +7,8 @@ const router = createRouter({
 });
 
 router.beforeEach(async (to) => {
+    to.meta.transition = 'fade';
+
     if (to.path === '') return { path: '' };
 });
 
