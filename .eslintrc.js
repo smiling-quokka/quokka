@@ -16,7 +16,6 @@ module.exports = {
     rules: {
         'brace-style': ['error', '1tbs', { allowSingleLine: true }],
         'linebreak-style': ['error', 'unix'],
-        // max line negth
         'max-len': [
             'error',
             {
@@ -139,5 +138,5 @@ module.exports = {
         'import/no-namespace': 'error',
         'import/order': ['error', { groups: ['builtin', 'external', 'internal', 'parent', 'sibling'] }],
         'no-duplicate-imports': 'error',
-    },
+    }
 };
