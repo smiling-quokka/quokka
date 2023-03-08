@@ -1,5 +1,5 @@
 import HomePage   from './Home';
-import NotesList  from './NotesList';
+import Bookmarks  from './Bookmarks';
 import NoticeBoard  from './NoticeBoard';
 
-export { HomePage, NotesList, NoticeBoard };
+export { HomePage, Bookmarks, NoticeBoard };

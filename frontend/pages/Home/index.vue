@@ -118,11 +118,8 @@ export default {
     props: {
         msg: {
             type: String,
-            default: 'Welcome to Your Vue.js App'  
-        }, 
-    },
-    created() {
-        this.$utils.say(this.msg);
+            default: 'Welcome to Your Vue.js App'
+        },
     }
 };
 </script>

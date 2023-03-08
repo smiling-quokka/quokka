@@ -1,26 +1,28 @@
 <template>
   <div class="hello">
+    <marks-list />
     The NOTES list will be here!
   </div>
 </template>
 
 <script>
-export default {
-    name: 'NotesList',
+import MarksList from './components/MarksList';
 
+export default {
+    name: 'Bookmarks',
+    components: { MarksList },
     props: {
         msg: {
             type: String,
-            default: 'Welcome to Your Vue.js App'  
-        }, 
+            default: 'Welcome to Your Vue.js App'
+        },
     },
     created() {
-        this.$utils.say(this.msg);
+        this.$store.dispatch('getItemsList');
     }
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 h3 {
   margin: 40px 0 0;

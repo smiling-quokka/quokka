@@ -1,4 +1,4 @@
-import { HomePage, NoticeBoard, NotesList } from 'pages';
+import { HomePage, NoticeBoard, Bookmarks } from 'pages';
 
 export default [
     {
@@ -12,8 +12,8 @@ export default [
         component: NoticeBoard,
     },
     {
-        path: '/notes-list',
-        name: 'notes-list',
-        component: NotesList,
+        path: '/bookmarks',
+        name: 'bookmarks',
+        component: Bookmarks,
     },
 ];
