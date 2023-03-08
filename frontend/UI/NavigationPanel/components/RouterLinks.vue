@@ -1,27 +1,25 @@
 <template>
-  <nav class="nav_bar">
-    <ul class="router_list flex--column">
-      <li
-        v-for="(route, i) in routes"
-        :key="i"
+  <ul class="router_list flex--column">
+    <li
+      v-for="(route, i) in routes"
+      :key="i"
+    >
+      <router-link
+        class="router_link flex--column"
+        :to="route.path"
       >
-        <router-link
-          class="router_link flex--column"
-          :to="route.path"
-        >
-          <icon
-            :icon-name="route.icon"
-          />
-          <span class="router_link-name">{{ route.title }}</span>
-        </router-link>
-      </li>
-    </ul>
-  </nav>
+        <icon
+          :icon-name="route.icon"
+        />
+        <span class="router_link-name">{{ route.title }}</span>
+      </router-link>
+    </li>
+  </ul>
 </template>
 
 <script>
 export default {
-    name: 'Router',
+    name: 'RouterLinks',
     data() {
         return {
             routes: [{
@@ -30,8 +28,8 @@ export default {
                 icon: 'home',
             },
             {
-                title: 'notes',
-                path: '/notes-list',
+                title: 'marks',
+                path: '/bookmarks',
                 icon: 'list-menu',
             }, {
                 title: 'board',
@@ -44,15 +42,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.nav_bar {
-  width: 48px;
-  height: 100%;
-  background-color: $main;
-  border-right: 2px solid $transparent-25--gray;
-}
 .router_list {
-  margin-top: 35px;
-
+  margin-top: 120px;
 }
 
 .router_link-name {

@@ -1,6 +1,6 @@
 <template>
   <div class="content--container flex--row">
-    <NavBar />
+    <navigation-panel />
     <main>
       <router-view
         v-slot="{ Component, route }"
@@ -15,11 +15,11 @@
 </template>
 
 <script>
-import { NavBar } from 'modules';
+import { NavigationPanel } from 'UI';
 
 export default {
     name: 'App',
-    components: { NavBar },
+    components: { NavigationPanel },
 };
 </script>
 
@@ -32,6 +32,7 @@ export default {
   main {
     width: 100%;
     padding: 10px;
+    overflow: auto;
   }
 }
 
