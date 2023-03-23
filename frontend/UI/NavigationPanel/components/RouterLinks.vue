@@ -11,7 +11,7 @@
         <icon
           :icon-name="route.icon"
         />
-        <span class="router_link-name">{{ route.title }}</span>
+        <span class="router_link-title">{{ route.title }}</span>
       </router-link>
     </li>
   </ul>
@@ -43,12 +43,7 @@ export default {
 
 <style lang="scss" scoped>
 .router_list {
-  margin-top: 120px;
-}
-
-.router_link-name {
-  color: $gray;
-  font-size: 0.8em;
+  margin-top: 60px;
 }
 
 .router_link {
@@ -64,5 +59,11 @@ export default {
     background: $transparent-25--blue;
   }
 }
+
+.router_link-title {
+  color: $gray;
+  font-size: 0.8em;
+}
+
 
 </style>

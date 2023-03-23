@@ -1,12 +1,4 @@
 import { createStore } from 'vuex';
+import bookmarks from '../pages/Bookmarks/store';
 
-export default createStore({
-    state() {
-        return { count: 0 };
-    },
-    mutations: {
-        increment(state) {
-            state.count++;
-        }
-    }
-});
+export default createStore({ modules: { bookmarks } });

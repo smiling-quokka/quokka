@@ -1,41 +1,30 @@
 <template>
   <div class="hello">
-    <marks-list />
-    The NOTES list will be here!
+    <marks-list :items="itemsList" />
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex';
+import { MODULE } from './store/config';
 import MarksList from './components/MarksList';
 
 export default {
     name: 'Bookmarks',
     components: { MarksList },
-    props: {
-        msg: {
-            type: String,
-            default: 'Welcome to Your Vue.js App'
-        },
+    computed: {
+        ...mapState({
+            itemsList(state) {
+                return state[MODULE].itemsList;
+            }
+        }),
     },
+
     created() {
-        this.$store.dispatch('getItemsList');
+        this.$store.dispatch(`${MODULE}/getBookmarksList`);
     }
 };
 </script>
 
 <style lang="scss" scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
 </style>
