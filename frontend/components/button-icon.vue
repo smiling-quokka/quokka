@@ -7,8 +7,7 @@
       class="button_title"
     >{{ title }}</span>
     <icon
-      v-if="icon"
-      :icon-name="name"
+      :icon-name="iconName"
     />
   </button>
 </template>
@@ -28,7 +27,12 @@ export default {
         },
         icon: {
             type: String,
-            default: null
+            default: ''
+        }
+    },
+    computed: {
+        iconName() {
+            return this.icon;
         }
     }
 };

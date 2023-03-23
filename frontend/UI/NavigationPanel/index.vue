@@ -14,9 +14,9 @@ export default {
 
 <style lang="scss" scoped>
 .navigation_panel {
-  width: 48px;
+  width: 58px;
   height: 100%;
-  background-color: $main;
+  background-color: $white;
   border-right: 2px solid $transparent-25--gray;
 }
 </style>
